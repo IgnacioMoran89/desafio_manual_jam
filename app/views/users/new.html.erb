@@ -1,2 +1,17 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= form_with(model: @user, local: true) do |f| %>
+    <div>
+        <%= f.text_field :name, placeholder: 'Ingresa tu nombre' %>
+    </div>
+
+    <div>
+        <%= f.text_field :email, placeholder: 'Ingresa tu email' %>
+    </div>
+
+    <div>
+        <%= f.password_field :password, placeholder: 'Ingresa tu contraseña' %>
+    </div>
+    <div>
+        <%= f.password_field :password_confirmation, placeholder: 'Confirma tu contraseña' %>
+    </div>
+    <%= f.submit "Registrarse" %>
+<% end %>

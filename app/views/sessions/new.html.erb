@@ -1,2 +1,14 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<%= form_with(model: @user, url: sessions_path, local: true) do |f| %>
+
+    <div>
+        <%= f.text_field :email, placeholder: 'Ingresa tu email' %>
+    </div>
+    
+    <div>
+        <%= f.text_field :email, placeholder: 'Ingresa tu email' %>
+    </div>
+    <div>
+        <%= f.password_field :password_digest, placeholder: 'Ingresa tu contraseña' %>
+    </div>
+    <%= f.submit "Iniciar Sesion" %>
+<% end %>

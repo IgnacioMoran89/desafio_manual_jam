@@ -11,4 +11,8 @@
         <%= f.password_field :password_digest, placeholder: 'Ingresa tu contraseña' %>
     </div>
     <%= f.submit "Iniciar Sesion" %>
+
+
+    <p>Are you a new user?</p>
+    <%= link_to('Register now', new_user_path) %>
 <% end %>

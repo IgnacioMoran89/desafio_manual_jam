@@ -11,6 +11,7 @@ class StoriesController < ApplicationController
   # GET /stories/1
   # GET /stories/1.json
   def show
+    @stories = Story.all
   end
 
   # GET /stories/new
@@ -26,7 +27,7 @@ class StoriesController < ApplicationController
   # POST /stories.json
   def create
     @story = Story.new(story_params)
-
+    @story.user = helpers.current_user #aca le indico al usuario de la historia es igual al usuario current user
     respond_to do |format|
       if @story.save
         format.html { redirect_to @story, notice: 'Story was successfully created.' }

@@ -67,3 +67,5 @@ resources :sessions, only: [:create, :destroy, :new]
 * Añadir usuario actual a cada Story creada (Se requiere de migracion para agregar la referencia a la tabla Stories y ajustar las relaciones de los modelos).
 
 * Crear vistas con las historias por usuario en el método show de user.
+
+* Heroku : https://appmanualjam.herokuapp.com/
